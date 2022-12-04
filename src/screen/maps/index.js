@@ -23,9 +23,7 @@ export default function Maps({ navigation }) {
     const getData = async () => {
         const dataToken = await AsyncStorage.getItem('authUser');
         setIsLoading(true)
-        await axios.get(`${path}/activities/monitoring/dashboard`,
-            { headers: { "Authorization": `Bearer ${dataToken}` } }
-        )
+//         Cara get nya cari dulu sendiri yaa
             .then(res => {
                 setData(res.data.data)
                 setIsLoading(false)
